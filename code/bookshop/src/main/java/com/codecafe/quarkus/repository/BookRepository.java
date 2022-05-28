@@ -2,6 +2,7 @@ package com.codecafe.quarkus.repository;
 
 import com.codecafe.quarkus.model.Book;
 
+import org.eclipse.microprofile.config.inject.ConfigProperty;
 import org.jboss.logging.Logger;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -13,6 +14,9 @@ import java.util.Optional;
 @ApplicationScoped
 public class BookRepository {
 
+  @ConfigProperty(name = "books.genre", defaultValue = "Sci-Fi")
+  String genre;
+
   @Inject
   Logger logger;
 
@@ -23,14 +27,14 @@ public class BookRepository {
           .id(1)
           .title("Dark Matter")
           .author("Blake Crouch")
-          .genre("Sci-Fi")
+          .genre(genre)
           .yearOfPublication(2016)
           .build(),
       Book.builder()
           .id(2)
           .title("Effective Java")
           .author("Joshua Bloch")
-          .genre("Programming")
+          .genre(genre)
           .yearOfPublication(2001)
           .build());
   }
