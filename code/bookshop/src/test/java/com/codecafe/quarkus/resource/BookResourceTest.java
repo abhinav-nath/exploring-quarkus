@@ -1,4 +1,4 @@
-package com.codecafe.quarkus;
+package com.codecafe.quarkus.resource;
 
 import io.quarkus.test.junit.QuarkusTest;
 
