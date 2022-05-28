@@ -38,3 +38,13 @@ Specification for
 Implemented by RESTEasy
 
 RESTEasy is a Quarkus extension
+
+## Quarkus Dev UI
+
+http://localhost:8030
+
+<img width="70%" alt="quarkus-ui" src="https://user-images.githubusercontent.com/48696735/170825052-48142a1a-5b41-4915-b167-36aab3d894f3.png">
+
+Click on "VISIT THE DEV UI"
+
+<img width="70%" alt="quarkus-dev-ui" src="https://user-images.githubusercontent.com/48696735/170825055-27774823-b4c3-4ea1-89bb-3808ad3e67f7.png">
