@@ -44,7 +44,8 @@ class BookResourceTest {
     .then()
       .statusCode(200)
       .body("title", is("Dark Matter"))
-      .body("author", is("Blake Crouch"));
+      .body("author", is("Blake Crouch"))
+      .body("genre", is("Sci-Fi"));
   }
 
 }
