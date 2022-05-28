@@ -26,3 +26,15 @@ Combined with Linux containers and Kubernetes, a Quarkus application runs as a n
 
 A Quarkus native executable starts much faster and uses far less memory than a traditional JVM.
 
+## JAX-RS and RESTEasy
+
+**JAX-RS** - Java API for RESTful Web Services
+
+Specification for
+
+- Exposing REST Web Services
+- Consuming REST Web Services
+
+Implemented by RESTEasy
+
+RESTEasy is a Quarkus extension
