@@ -48,3 +48,20 @@ http://localhost:8030
 Click on "VISIT THE DEV UI"
 
 <img width="70%" alt="quarkus-dev-ui" src="https://user-images.githubusercontent.com/48696735/170825055-27774823-b4c3-4ea1-89bb-3808ad3e67f7.png">
+
+## Quarkus Profiles
+
+Profile based properties at a single place (application.properties)
+
+```
+books.genre=Programming
+%dev.books.genre=Horror
+%test.books.genre=Sci-Fi
+%staging.books.genre=Information Technology
+```
+
+To choose a profile while starting up Quarkus:
+
+```
+./gradlew quarkusDev -Dquarkus.profile=staging
+```
