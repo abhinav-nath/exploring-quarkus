@@ -1,6 +1,6 @@
-package com.codecafe.quarkus.repository;
+package com.codecafe.quarkus.microservices.book.repository;
 
-import com.codecafe.quarkus.model.Book;
+import com.codecafe.quarkus.microservices.book.model.Book;
 
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 import org.jboss.logging.Logger;

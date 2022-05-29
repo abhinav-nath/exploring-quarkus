@@ -1,4 +1,4 @@
-package com.codecafe.quarkus.resource;
+package com.codecafe.quarkus.microservices.book.resource;
 
 import javax.ws.rs.core.MediaType;
 

@@ -22,7 +22,7 @@ dependencies {
     testImplementation 'io.rest-assured:rest-assured'
 }
 
-group 'com.codecafe.quarkus'
+group 'com.codecafe.quarkus.microservices'
 version '1.0.0-SNAPSHOT'
 
 java {

@@ -1,4 +1,4 @@
-package com.codecafe.quarkus.resource;
+package com.codecafe.quarkus.microservices.book.resource;
 
 import java.util.List;
 import java.util.Optional;
@@ -9,8 +9,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 
-import com.codecafe.quarkus.model.Book;
-import com.codecafe.quarkus.repository.BookRepository;
+import com.codecafe.quarkus.microservices.book.repository.BookRepository;
+import com.codecafe.quarkus.microservices.book.model.Book;
 
 import static javax.ws.rs.core.MediaType.APPLICATION_JSON;
 import static javax.ws.rs.core.MediaType.TEXT_PLAIN;

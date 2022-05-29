@@ -1,4 +1,4 @@
-package com.codecafe.quarkus.model;
+package com.codecafe.quarkus.microservices.book.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
