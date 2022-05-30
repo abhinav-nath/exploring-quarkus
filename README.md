@@ -75,3 +75,8 @@ To choose a profile while starting up Quarkus:
 ```
 ./gradlew quarkusDev -Dquarkus.profile=staging
 ```
+
+## Endpoints available in Dev mode
+
+<img width="30%" alt="image" src="https://user-images.githubusercontent.com/48696735/171035031-ba4802ff-bdf2-4051-a245-2e4dfe0586c7.png">
+
