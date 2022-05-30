@@ -1,4 +1,4 @@
-package com.codecafe.quarkus.microservices.number;
+package com.codecafe.quarkus.microservices.number.resource;
 
 import io.quarkus.test.junit.QuarkusTest;
 

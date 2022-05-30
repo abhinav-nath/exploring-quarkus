@@ -11,11 +11,14 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import org.eclipse.microprofile.openapi.annotations.media.Schema;
+
 @Getter
 @Builder
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
+@Schema(description = "ISBNs for books")
 public class IsbnNumbers {
 
   @JsonbProperty("isbn_13")
