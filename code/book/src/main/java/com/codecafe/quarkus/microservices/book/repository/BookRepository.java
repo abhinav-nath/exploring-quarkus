@@ -1,15 +1,17 @@
 package com.codecafe.quarkus.microservices.book.repository;
 
-import com.codecafe.quarkus.microservices.book.model.Book;
-
-import org.eclipse.microprofile.config.inject.ConfigProperty;
-import org.jboss.logging.Logger;
+import java.util.List;
+import java.util.Optional;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
-import java.util.List;
-import java.util.Optional;
+import org.eclipse.microprofile.config.inject.ConfigProperty;
+import org.jboss.logging.Logger;
+
+import com.codecafe.quarkus.microservices.book.model.Book;
+
+import static java.time.Instant.now;
 
 @ApplicationScoped
 public class BookRepository {
@@ -20,18 +22,31 @@ public class BookRepository {
   @Inject
   Logger logger;
 
+  public Book createABook(String title, String author, int yearOfPublication, String genre) {
+    Book book = Book.builder()
+                    .isbn13("dummy-isbn13-1")
+                    .title(title)
+                    .author(author)
+                    .yearOfPublication(yearOfPublication)
+                    .genre(genre)
+                    .createdAt(now())
+                    .build();
+    logger.info("Book created : " + book);
+    return book;
+  }
+
   public List<Book> getAllBooks() {
     logger.info("==> inside getAllBooks method");
     return List.of(
       Book.builder()
-          .id(1)
+          .isbn13("dummy-isbn13-1")
           .title("Dark Matter")
           .author("Blake Crouch")
           .genre(genre)
           .yearOfPublication(2016)
           .build(),
       Book.builder()
-          .id(2)
+          .isbn13("dummy-isbn13-2")
           .title("Effective Java")
           .author("Joshua Bloch")
           .genre(genre)
@@ -44,11 +59,11 @@ public class BookRepository {
     return getAllBooks().size();
   }
 
-  public Optional<Book> getBook(int id) {
-    logger.info("==> inside getBook method with id : " + id);
+  public Optional<Book> getBook(String isbn13) {
+    logger.info("==> inside getBook method with isbn13 : " + isbn13);
     return getAllBooks()
       .stream()
-      .filter(b -> b.getId() == id)
+      .filter(b -> isbn13.equals(b.getIsbn13()))
       .findFirst();
   }
 
