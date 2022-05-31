@@ -13,6 +13,9 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 
+import org.eclipse.microprofile.openapi.annotations.Operation;
+import org.eclipse.microprofile.openapi.annotations.tags.Tag;
+
 import com.codecafe.quarkus.microservices.book.model.Book;
 import com.codecafe.quarkus.microservices.book.repository.BookRepository;
 
@@ -22,6 +25,7 @@ import static javax.ws.rs.core.MediaType.TEXT_PLAIN;
 
 @Path("/api/books")
 @Produces(APPLICATION_JSON)
+@Tag(name = "Book REST endpoint")
 public class BookResource {
 
   @Inject
@@ -30,6 +34,10 @@ public class BookResource {
   @POST
   @Produces(APPLICATION_JSON)
   @Consumes(APPLICATION_FORM_URLENCODED)
+  @Operation(
+    summary = "Creates a Book",
+    description = "Creates a Book with an ISBN number"
+  )
   public Response createABook(@FormParam("title") String title, @FormParam("author") String author, @FormParam("year") int yearOfPublication, @FormParam("genre") String genre) {
     Book book = bookRepository.createABook(title, author, yearOfPublication, genre);
     return Response.status(201).entity(book).build();

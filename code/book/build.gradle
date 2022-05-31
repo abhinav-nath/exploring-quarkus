@@ -13,6 +13,7 @@ dependencies {
   implementation 'io.quarkus:quarkus-resteasy-jsonb'
   implementation 'io.quarkus:quarkus-resteasy'
   implementation 'io.quarkus:quarkus-arc'
+  implementation 'io.quarkus:quarkus-smallrye-openapi'
   compileOnly "org.projectlombok:lombok:${lombokVersion}"
   annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
 

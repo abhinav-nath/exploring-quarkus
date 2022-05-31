@@ -5,6 +5,8 @@ import java.time.Instant;
 import javax.json.bind.annotation.JsonbDateFormat;
 import javax.json.bind.annotation.JsonbProperty;
 
+import org.eclipse.microprofile.openapi.annotations.media.Schema;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -16,6 +18,7 @@ import lombok.ToString;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
+@Schema(description = "Book object")
 public class Book {
 
   @JsonbProperty("isbn_13")
@@ -28,6 +31,7 @@ public class Book {
   private String genre;
 
   @JsonbDateFormat("yyyy-MM-dd")
+  @Schema(implementation = String.class, format = "date")
   private Instant createdAt;
 
 }
