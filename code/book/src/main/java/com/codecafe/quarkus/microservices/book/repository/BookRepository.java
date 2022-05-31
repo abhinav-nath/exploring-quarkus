@@ -7,9 +7,11 @@ import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
 import org.eclipse.microprofile.config.inject.ConfigProperty;
+import org.eclipse.microprofile.rest.client.inject.RestClient;
 import org.jboss.logging.Logger;
 
 import com.codecafe.quarkus.microservices.book.model.Book;
+import com.codecafe.quarkus.microservices.book.proxy.NumberProxy;
 
 import static java.time.Instant.now;
 
@@ -22,9 +24,14 @@ public class BookRepository {
   @Inject
   Logger logger;
 
+  @Inject
+  @RestClient
+  NumberProxy numberProxy;
+
   public Book createABook(String title, String author, int yearOfPublication, String genre) {
+    System.out.println("hhh " + numberProxy.generateIsbnNumbers());
     Book book = Book.builder()
-                    .isbn13("13-dummy-isbn13-1")
+                    .isbn13(numberProxy.generateIsbnNumbers().getIsbn13())
                     .title(title)
                     .author(author)
                     .yearOfPublication(yearOfPublication)
