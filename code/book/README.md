@@ -59,3 +59,9 @@ If you want to learn more about building native executables, please consult http
 Easily start your RESTful Web Services
 
 [Related guide section...](https://quarkus.io/guides/getting-started#the-jax-rs-resources)
+
+## Create a Book
+
+```shell
+curl http://localhost:8702/api/books -d "title=Dark Matter&author=Blake Crouch&year=2016&genre=Sci-Fi"
+```
