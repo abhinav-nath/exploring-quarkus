@@ -4,6 +4,8 @@
 
 **Initial release :** 20 March 2019; 3 years ago
 
+[Quarkus Cheatsheet](https://lordofthejars.github.io/quarkus-cheat-sheet/ "Quarkus Cheatsheet")
+
 ## Extension Mechanism
 
 - Very small core
@@ -35,6 +37,12 @@ A Quarkus native executable starts much faster and uses far less memory than a t
 ```
 ./gradlew build -Dquarkus.package.type=native
 ```
+
+## CDI (Contexts and Dependency Injection)
+
+https://quarkus.io/guides/cdi-reference
+
+https://quarkus.io/guides/cdi
 
 ## JAX-RS and RESTEasy
 
@@ -79,4 +87,3 @@ To choose a profile while starting up Quarkus:
 ## Endpoints available in Dev mode
 
 <img width="30%" alt="image" src="https://user-images.githubusercontent.com/48696735/171035031-ba4802ff-bdf2-4051-a245-2e4dfe0586c7.png">
-
