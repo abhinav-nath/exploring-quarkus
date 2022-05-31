@@ -1,17 +1,13 @@
 package com.codecafe.quarkus.microservices.book.model;
 
-import java.time.Instant;
+import lombok.*;
+
+import org.eclipse.microprofile.openapi.annotations.media.Schema;
 
 import javax.json.bind.annotation.JsonbDateFormat;
 import javax.json.bind.annotation.JsonbProperty;
 
-import org.eclipse.microprofile.openapi.annotations.media.Schema;
-
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import java.time.Instant;
 
 @Getter
 @Builder
@@ -27,7 +23,9 @@ public class Book {
   private String title;
   private String author;
 
+  @JsonbProperty("year")
   private int yearOfPublication;
+
   private String genre;
 
   @JsonbDateFormat("yyyy-MM-dd")

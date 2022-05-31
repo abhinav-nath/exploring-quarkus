@@ -24,7 +24,7 @@ public class BookRepository {
 
   public Book createABook(String title, String author, int yearOfPublication, String genre) {
     Book book = Book.builder()
-                    .isbn13("dummy-isbn13-1")
+                    .isbn13("13-dummy-isbn13-1")
                     .title(title)
                     .author(author)
                     .yearOfPublication(yearOfPublication)
@@ -39,14 +39,14 @@ public class BookRepository {
     logger.info("==> inside getAllBooks method");
     return List.of(
       Book.builder()
-          .isbn13("dummy-isbn13-1")
+          .isbn13("13-dummy-isbn13-1")
           .title("Dark Matter")
           .author("Blake Crouch")
           .genre(genre)
           .yearOfPublication(2016)
           .build(),
       Book.builder()
-          .isbn13("dummy-isbn13-2")
+          .isbn13("13-dummy-isbn13-2")
           .title("Effective Java")
           .author("Joshua Bloch")
           .genre(genre)
